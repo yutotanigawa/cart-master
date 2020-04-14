@@ -1,0 +1,11 @@
+    <h1>一覧</h1>
+    <table>
+      <% @cart_items.each do |book| %>
+      <tr>
+      	<th><%= book.title %></th>
+      	<th><%= book.body %></th>
+        <th><%= book.quantity %></th>
+      </tr>
+        <% end %>
+        <%= button_to "全て削除", cart_items_path, method: :delete %>
+      </table>
